@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  pucmg-voting:
+    container_name:  pucmg-voting
+    image: php:8.0-apache
+    ports: 
+      - "8000:80"
+    volumes: 
+      - /var/www/html

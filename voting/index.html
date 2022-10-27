@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="container">
+  <h1>Uma Simples Aplicacao de Votacao com Ethereum</h1>
+
+  <form id="add-candidate-form">
+    <input id="candidate-name" type="text" name="candidate"></input>
+    <button type="button" class="btn btn-primary" id="btnAddCandidate">Adicionar candidato</button>
+  </form>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Candidato</th>
+          <th>Votos</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+  </div>
+  <form id="vote-form">
+    <select id="candidate-options" name="candidate"></select>
+    <button type="button" class="btn btn-primary" id="btnVote">Votar</button>
+  </form>
+</body>
+<script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"> </script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="./js/VotingAbi.js"></script>
+<script src="./js/app.js"></script>
+</html>
