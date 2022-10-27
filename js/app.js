@@ -122,3 +122,19 @@ $("#btnAddCandidate").on('click',function(){
                		return;     
         	});  
 });
+
+
+$("#btnAddVotingPerson").on('click',function(){
+	const address = $("#voting-person").val();
+	const contractName = $("#voting-person-name").val();
+
+        eleicao.methods.giveRightToVote(address, contractName).send({from: myAddress})
+	       .on('receipt',function(receipt) {
+			//getCandidatos(eleicao, populaCandidatos);
+			windows.location.reaload(true);
+		})
+		.on('error',function(error) {
+			console.log(error.message);
+               		return;     
+        	});  
+});
