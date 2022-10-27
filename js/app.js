@@ -112,7 +112,7 @@ $("#btnVote").on('click',function(){
 $("#btnAddCandidate").on('click',function(){
 	const candidato = $("#candidate-name").val();
 
-        eleicao.methods.addProposalToList(candidato).send({from: myAddress})
+        eleicao.methods.addProposalToList([candidato]).send({from: myAddress})
 	       .on('receipt',function(receipt) {
 			//getCandidatos(eleicao, populaCandidatos);
 			windows.location.reaload(true);
