@@ -1,1 +1,1 @@
-<?php include_once("/voting/index.html"); ?>
+<?php include_once("index.html"); ?>
