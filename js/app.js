@@ -191,7 +191,7 @@ $("#btnDelegate").on('click', function () {
 function chairperson() {
 
 	eleicao.methods.chairperson().call({ from: myAddress })
-		.on('receipt', async function (error, data) {
+		.on('receipt', function (error, data) {
 			//getCandidatos(eleicao, populaCandidatos);
 			return data;
 		})
