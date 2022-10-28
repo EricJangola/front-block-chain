@@ -36,6 +36,8 @@ const getMyAccounts = accounts => {
 				$("#finish-form").hide();
 				$("#table-content-eleitor").hide();
 			}
+			const mystatus = getMyStatus();
+			$("#voting-status").val(mystatus);
 		}
 	} catch (error) {
 		console.log("Erro ao obter contas...");
@@ -54,6 +56,13 @@ window.addEventListener('load', async function () {
 		getCandidatos(eleicao, populaCandidatos);
 	}
 });
+
+function myStatus() {
+	//contractRef.methods.getProposalsCount().call().then((count)=>{
+	eleicao.methods.getMyStatus().call(async function (error, status) {
+		return status;
+	});
+}
 
 function getCandidatos(contractRef, callback) {
 	//contractRef.methods.getProposalsCount().call().then((count)=>{
@@ -238,7 +247,7 @@ $("#btnSeeVoters").on('click', function () {
 				console.log(err);
 			}
 		}
-		
+
 		populaVoters(voters);
 	});
 });
