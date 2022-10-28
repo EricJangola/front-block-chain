@@ -1,5 +1,6 @@
 
 const tableElem = document.getElementById("table-body");
+const tableElemVoter = document.getElementById("table-body-eleitor");
 const candidateOptions = document.getElementById("candidate-options");
 const voteForm = document.getElementById("vote-form");
 
