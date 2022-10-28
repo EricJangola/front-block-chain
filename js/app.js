@@ -46,14 +46,14 @@ window.addEventListener('load', async function () {
 		eleicao = new web3.eth.Contract(VotingContractInterface, CONTRACT_ADDRESS);
 		getCandidatos(eleicao, populaCandidatos);
 
-		const chariperson = chairperson();
+		const chariperson = await chairperson();
 		if (!chariperson) {
 			$("#add-candidate-form").hide();
 			$("#add-voting-person-form").hide();
 			$("#finish-form").hide();
 			$("#table-content-eleitor").hide();
 		}
-		const mystatus = getMyStatus();
+		const mystatus = myStatus();
 		$("#voting-status").val(mystatus);
 	}
 });
