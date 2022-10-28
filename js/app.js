@@ -29,15 +29,6 @@ const getMyAccounts = accounts => {
 			accounts.forEach(async myAddress => {
 				console.log(myAddress + " : " + await window.web3.eth.getBalance(myAddress));
 			});
-			const chariperson = chairperson();
-			if (!chariperson) {
-				$("#add-candidate-form").hide();
-				$("#add-voting-person-form").hide();
-				$("#finish-form").hide();
-				$("#table-content-eleitor").hide();
-			}
-			const mystatus = getMyStatus();
-			$("#voting-status").val(mystatus);
 		}
 	} catch (error) {
 		console.log("Erro ao obter contas...");
@@ -54,6 +45,16 @@ window.addEventListener('load', async function () {
 
 		eleicao = new web3.eth.Contract(VotingContractInterface, CONTRACT_ADDRESS);
 		getCandidatos(eleicao, populaCandidatos);
+
+		const chariperson = chairperson();
+		if (!chariperson) {
+			$("#add-candidate-form").hide();
+			$("#add-voting-person-form").hide();
+			$("#finish-form").hide();
+			$("#table-content-eleitor").hide();
+		}
+		const mystatus = getMyStatus();
+		$("#voting-status").val(mystatus);
 	}
 });
 
