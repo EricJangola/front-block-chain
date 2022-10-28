@@ -221,7 +221,7 @@ $("#btnSeeVoters").on('click', function () {
 				await eleicao.methods.getVoterFromId(i).call().then((data) => {
 					var voter = {
 						name: data[0],
-						status: data[1]
+						status: data[2]
 					};
 					voters.push(voter);
 				});
