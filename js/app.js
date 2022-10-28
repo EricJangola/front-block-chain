@@ -47,7 +47,7 @@ window.addEventListener('load', async function () {
 		getCandidatos(eleicao, populaCandidatos);
 
 		const chariperson = await chairperson();
-		if (!chariperson) {
+		if (chariperson !== myAddress) {
 			$("#add-candidate-form").hide();
 			$("#add-voting-person-form").hide();
 			$("#finish-form").hide();
