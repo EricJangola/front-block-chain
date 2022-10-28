@@ -108,6 +108,19 @@ var VotingContractInterface = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "getMyStatus",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "myStatus",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
