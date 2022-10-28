@@ -29,7 +29,7 @@ const getMyAccounts = accounts => {
 			accounts.forEach(async myAddress => {
 				console.log(myAddress + " : " + await window.web3.eth.getBalance(myAddress));
 			});
-			const chariperson = await chairperson();
+			const chariperson = chairperson();
 			if (!chariperson) {
 				$("#add-candidate-form").hide();
 				$("#add-voting-person-form").hide();
