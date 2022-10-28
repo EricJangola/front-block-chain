@@ -188,17 +188,22 @@ $("#btnDelegate").on('click', function () {
 		});
 });
 
-function chairperson() {
+// function chairperson() {
 
-	eleicao.methods.chairperson().call({ from: myAddress })
-		.on('receipt', function (error, data) {
-			//getCandidatos(eleicao, populaCandidatos);
-			return data;
-		})
-		.on('error', function (error) {
-			console.log(error.message);
-			return;
-		});
+// 	eleicao.methods.chairperson().call({ from: myAddress })
+// 		.on('receipt', function (error, data) {
+// 			//getCandidatos(eleicao, populaCandidatos);
+// 			return data;
+// 		})
+// 		.on('error', function (error) {
+// 			console.log(error.message);
+// 			return;
+// 		});
+// }
+
+
+async function chairperson() {
+	return await eleicao.methods.chairperson().call({ from: myAddress });
 }
 
 
