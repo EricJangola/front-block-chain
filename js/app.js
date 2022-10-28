@@ -54,7 +54,7 @@ window.addEventListener('load', async function () {
 			$("#table-content-eleitor").hide();
 		}
 		const mystatus = await myStatus();
-		$("#voting-status").val(mystatus);
+		$("#voting-status").text(mystatus);
 	}
 });
 
