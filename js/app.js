@@ -218,7 +218,7 @@ $("#btnSeeVoters").on('click', function () {
 		console.log('count', count);
 		for (i = 0; i < count; i++) {
 			try {
-				await contractRef.methods.getVoterFromId(i).call().then((data) => {
+				await eleicao.methods.getVoterFromId(i).call().then((data) => {
 					var voter = {
 						name: data[0],
 						status: data[1]
