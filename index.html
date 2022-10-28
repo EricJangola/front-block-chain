@@ -19,6 +19,23 @@
     <button type="button" class="btn btn-primary" id="btnAddVotingPerson">Adicionar eleitor</button>
   </form>
 
+  <form id="see-voters-form">
+    <button type="button" class="btn btn-primary" id="btnSeeVoters">Ver eleitores</button>
+  </form>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Eleitor</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="table-body-eleitor" hidden="true">
+      </tbody>
+    </table>
+  </div>
+
   <div class="table-responsive">
     <table class="table table-bordered">
       <thead>
@@ -37,6 +54,10 @@
   </form>
   <br></br>
   <form id="finish-form">
+    <button type="button" class="btn btn-primary" id="btnDelegate">Delegar voto</button>
+  </form>
+  <form id="finish-form">
+    <input id="delegate-input" type="text" name="delegate-input"></input>
     <button type="button" class="btn btn-primary" id="btnFinish">Encerrar votação</button>
   </form>
 </body>
