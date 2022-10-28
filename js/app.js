@@ -202,7 +202,7 @@ function populaVoters(voters) {
 		rowElem.appendChild(voteCell);
 
 		// Adds the new row to the voting table.
-		tableElem.appendChild(rowElem);
+		tableElemVoter.appendChild(rowElem);
 
 		// Creates an option for each candidate
 		const candidateOption = document.createElement("option");
