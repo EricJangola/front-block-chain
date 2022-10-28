@@ -46,13 +46,18 @@ window.addEventListener('load', async function () {
 		eleicao = new web3.eth.Contract(VotingContractInterface, CONTRACT_ADDRESS);
 		getCandidatos(eleicao, populaCandidatos);
 
-		const chariperson = await chairperson();
-		if (chariperson !== myAddress) {
-			$("#add-candidate-form").hide();
-			$("#add-voting-person-form").hide();
-			$("#finish-form").hide();
-			$("#table-content-eleitor").hide();
+		try {
+			const chariperson = await chairperson();
+			if (chariperson !== myAddress) {
+				$("#add-candidate-form").hide();
+				$("#add-voting-person-form").hide();
+				$("#finish-form").hide();
+				$("#table-content-eleitor").hide();
+			}
+		} catch (error) {
+			console.log(error);
 		}
+
 		const mystatus = await myStatus();
 		$("#voting-status").text(mystatus);
 	}
