@@ -60,7 +60,7 @@ window.addEventListener('load', async function () {
 
 async function myStatus() {
 	//contractRef.methods.getProposalsCount().call().then((count)=>{
-	return eleicao.methods.getMyStatus().call();
+	return await eleicao.methods.getMyStatus().call({ from: myAddress });
 }
 
 function getCandidatos(contractRef, callback) {
