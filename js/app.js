@@ -54,6 +54,7 @@ window.addEventListener('load', async function () {
 				$("#finish-form").hide();
 				$("#table-content-eleitor").hide();
 				$("#table-content-votes").hide();
+				$("#see-voters-form").hide();
 			}
 		} catch (error) {
 			console.log(error);
