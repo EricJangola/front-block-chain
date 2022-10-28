@@ -206,6 +206,7 @@ $("#btnDelegate").on('click', function () {
 
 
 async function chairperson() {
+	// return await eleicao.methods.chairperson().call({ from: myAddress });
 	return await eleicao.methods.chairperson().call({ from: myAddress });
 }
 
