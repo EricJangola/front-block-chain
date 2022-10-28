@@ -9,7 +9,7 @@ let voters = [];
 var myAddress;
 var eleicao;
 // const CONTRACT_ADDRESS = "0xf396a27e87ccf377c289b8375c3817046e94133e";
-const CONTRACT_ADDRESS = "0x1fF486CD5C7CCe331d7B00D07D3ED21A83DDeef4";
+const CONTRACT_ADDRESS = "0xe1275fAc4CfFc9658cB738B4588b8942eD7a8A9e";
 
 const ethEnabled = () => {
 	if (window.ethereum) {
