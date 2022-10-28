@@ -53,6 +53,7 @@ window.addEventListener('load', async function () {
 				$("#add-voting-person-form").hide();
 				$("#finish-form").hide();
 				$("#table-content-eleitor").hide();
+				$("#table-content-votes").hide();
 			}
 		} catch (error) {
 			console.log(error);
