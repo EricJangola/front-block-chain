@@ -53,16 +53,14 @@ window.addEventListener('load', async function () {
 			$("#finish-form").hide();
 			$("#table-content-eleitor").hide();
 		}
-		const mystatus = myStatus();
+		const mystatus = await myStatus();
 		$("#voting-status").val(mystatus);
 	}
 });
 
-function myStatus() {
+async function myStatus() {
 	//contractRef.methods.getProposalsCount().call().then((count)=>{
-	eleicao.methods.getMyStatus().call(async function (error, status) {
-		return status;
-	});
+	return eleicao.methods.getMyStatus().call();
 }
 
 function getCandidatos(contractRef, callback) {
