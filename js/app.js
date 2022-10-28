@@ -236,7 +236,7 @@ function populaVoters(voters) {
 		const candidateOption = document.createElement("option");
 		candidateOption.value = index;
 		candidateOption.innerText = voter.name;
-		candidateOptions.appendChild(candidateOption);
+		// candidateOptions.appendChild(candidateOption);
 	});
 
 	$("#table-body-eleitor").show();
