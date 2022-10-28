@@ -214,7 +214,7 @@ function populaVoters(voters) {
 }
 
 $("#btnSeeVoters").on('click', function () {
-	contractRef.methods.getVotersCount().call(async function (error, count) {
+	eleicao.methods.getVotersCount().call(async function (error, count) {
 		console.log('count', count);
 		for (i = 0; i < count; i++) {
 			try {
