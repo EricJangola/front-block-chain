@@ -55,7 +55,7 @@ function getCandidatos(contractRef,callback)
 			await contractRef.methods.getProposal(i).call().then((data)=>{
 				console.log('data', data);
 				var proposal = {
-          				name : web3.utils.toUtf8(data[0]),
+          				name : data[0],
           				voteCount : data[1]
       				};
 				proposals.push(proposal);
