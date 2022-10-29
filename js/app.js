@@ -61,7 +61,7 @@ window.addEventListener('load', async function () {
 		}
 
 		const mystatus = await myStatus();
-		$("#voting-status").text('Status:' + mystatus);
+		$("#voting-status").text('Status: ' + mystatus);
 	}
 });
 
