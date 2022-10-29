@@ -156,7 +156,7 @@ $("#btnAddVotingPerson").on('click', function () {
 	eleicao.methods.giveRightToVote(address, contractName).send({ from: myAddress })
 		.on('receipt', function (receipt) {
 			//getCandidatos(eleicao, populaCandidatos);
-			windows.location.reaload(true);
+			windows.location.reload(true);
 		})
 		.on('error', function (error) {
 			console.log(error.message);
@@ -170,7 +170,7 @@ $("#btnFinish").on('click', function () {
 
 			$("#table-body").show();
 			//getCandidatos(eleicao, populaCandidatos);
-			windows.location.reaload(true);
+			windows.location.reload(true);
 		})
 		.on('error', function (error) {
 			console.log(error.message);
