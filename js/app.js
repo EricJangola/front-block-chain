@@ -65,6 +65,19 @@ window.addEventListener('load', async function () {
 	}
 });
 
+function showToast(text) {
+	// Get the snackbar DIV
+	const x = document.getElementById("snackbar");
+
+	x.text(text);
+  
+	// Add the "show" class to DIV
+	x.className = "show";
+  
+	// After 3 seconds, remove the show class from DIV
+	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  
 async function myStatus() {
 	//contractRef.methods.getProposalsCount().call().then((count)=>{
 	return await eleicao.methods.getMyStatus().call({ from: myAddress });
@@ -156,6 +169,7 @@ $("#btnAddVotingPerson").on('click', function () {
 	eleicao.methods.giveRightToVote(address, contractName).send({ from: myAddress })
 		.on('receipt', function (receipt) {
 			//getCandidatos(eleicao, populaCandidatos);
+			showToast('Pessoa adicionada a eleição');
 			windows.location.reaload(true);
 		})
 		.on('error', function (error) {
